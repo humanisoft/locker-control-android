@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:layout_gravity="center_horizontal"
+    tools:context=".ui.BoardFragment">
+
+    <LinearLayout
+        android:id="@+id/board_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+        <TextView
+            android:id="@+id/board_lblPort"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:text="@string/choosePort"
+            />
+        <Spinner
+            android:id="@+id/board_cboPort"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:spinnerMode="dialog"
+            />
+        <Button
+            android:id="@+id/board_btnPort"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:text= "@string/open"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/board_layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/board_layout1"
+        app:layout_constraintStart_toStartOf="@id/board_layout1"
+        >
+        <TextView
+            android:id="@+id/board_lblLayer"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lockboardTiers"
+            android:textAlignment="textEnd" />
+        <Spinner
+            android:id="@+id/board_cboLayer"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp" />
+        <Button
+            android:id="@+id/board_btnGetLayer"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/get" />
+        <Button
+            android:id="@+id/board_btnSetLayer"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/set" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:id="@+id/board_layout3"
+        app:layout_constraintTop_toBottomOf="@id/board_layout2"
+        app:layout_constraintStart_toStartOf="@id/board_layout1"
+        >
+        <TextView
+            android:id="@+id/board_lblKeepTime"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lockKeepTime"
+            android:textAlignment="textEnd" />
+        <Spinner
+            android:id="@+id/board_cboKeepTime"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp" />
+        <Button
+            android:id="@+id/board_btnKeepTime"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:visibility="invisible"
+            android:text="@string/set" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/board_layout3"
+        app:layout_constraintStart_toStartOf="@id/board_layout3"
+        >
+        <TextView
+            android:id="@+id/Unlcokmode"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Unlockmode"
+            android:textAlignment="textEnd" />
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_option1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Unlock"
+                android:layout_marginStart="5dp"
+                />
+            <RadioButton
+                android:id="@+id/radio_option2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/levelUnlock"
+                android:layout_marginStart="5dp" />
+        </RadioGroup>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

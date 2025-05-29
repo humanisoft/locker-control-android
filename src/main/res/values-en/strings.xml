@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Locker Test</string>
+    <string name="app_start">App Start</string>
+
+    <string name="choosePort">Port</string>
+    <string name="layer">Layer</string>
+    <string name="logs">Logs</string>
+    <string name="lockboardTiers">Tiers</string>
+    <string name="get">Get</string>
+    <string name="set">Set</string>
+    <string name="checkVersion">固件版本</string>
+    <string name="checkPower">掉电检测</string>
+    <string name="readCard">读卡</string>
+    <string name="writeCard">写卡</string>
+    <string name="hint1">请点击按钮</string>
+    <string name="locker">Board</string>
+    <string name="box">Relay</string>
+    <string name="refresh">Refresh</string>
+    <string name="updateStatus">Update Status</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="portOpened">Port is opened!</string>
+    <string name="portClosed">Port is closed!</string>
+    <string name="failed">Failed</string>
+    <string name="succeed">Succeed</string>
+    <string name="openPort">Open Port</string>
+    <string name="closePort">Close Port</string>
+    <string name="unlock">Unlock</string>
+    <string name="updateRelayStatus">Update relay status</string>
+    <string name="getLockboardTiers">Get tiers of lockerboard</string>
+    <string name="setLockboardTiers">Set tiers of lockerboard</string>
+    <string name="boardTest">Board Test</string>
+    <string name="commonSet">Common Test</string>
+    <string name="relay">Relay</string>
+    <string name="stop">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="portNotOpened">Port is closed!</string>
+    <string name="Continue">Continue</string>
+    <string name="lockKeepTime">Lock-KeepTIme[ms]</string>
+    <string name="Unlockmode">开锁模式</string>
+    <string name="Unlock">开锁</string>
+    <string name="levelUnlock">电平开锁</string>
+</resources>

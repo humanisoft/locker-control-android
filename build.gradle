@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.headleader.lockertest"
+        minSdkVersion 19
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug{
+            minifyEnabled false
+            debuggable true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets.main {
+        jniLibs.srcDirs = ['libs']
+        res.srcDirs = ['src/main/res', 'src/main/res/values-zh_CN']
+    }
+    compileOptions {
+        targetCompatibility = 1.8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    namespace 'com.headleader.lockertest'
+    applicationVariants.all {
+        if (buildType.name == "release") {
+            def createTime = new Date().format("yyMMdd", TimeZone.getTimeZone("GMT+08:00"))
+            outputs.all {
+                outputFileName = "${rootProject.name}_${createTime}.apk"
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation files('libs/LockBoardLib.jar')
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.fragment:fragment:1.3.5'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+}
